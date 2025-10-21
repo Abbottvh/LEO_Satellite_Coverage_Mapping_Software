@@ -14,6 +14,7 @@ This project visualizes satellite coverage over any region using geospatial hex 
 
 ---
 
+
 ## 🧰 Technologies Used
 
 | Component                  | Description                                                                 |
@@ -24,6 +25,26 @@ This project visualizes satellite coverage over any region using geospatial hex 
 | **GeoJSON**                | Region boundary input for tiling                                            |
 | **LocalStorage**           | Caching coverage maps for performance                                       |
 | **Python (Pandas + Plotly)** | Post-analysis and visualization of exported coverage data               |
+
+---
+
+## 🧱 Hexagon Tiling with H3
+
+This project uses [H3 hexagonal indexing](https://h3geo.org/) to tile geographic regions into uniform cells. Hex tiling enables consistent spatial analysis across varying terrain, making it ideal for satellite coverage modeling.
+
+Below is an example of France rendered at two different resolutions:
+
+<div style="display: flex; align-items: center; margin-bottom: 10px;">
+  <img src="https://github.com/user-attachments/assets/ee74724b-4a4a-40f2-a456-6323692e0a64" alt="France Resolution 3" width="400" style="margin-right: 20px;" />
+  <div><h3 style="margin: 0;">🇫🇷 France — Resolution 3</h3></div>
+</div>
+
+<div style="display: flex; align-items: center; margin-bottom: 10px;">
+  <img src="https://github.com/user-attachments/assets/cd07d4d8-9eeb-436d-bc42-13a1e1b1c3bb" alt="France Resolution 5" width="400" style="margin-right: 20px;" />
+  <div><h3 style="margin: 0;">🇫🇷 France — Resolution 5</h3></div>
+</div>
+
+Higher resolutions (like 5) produce smaller hexagons, allowing for more granular analysis of satellite visibility and stability. Lower resolutions (like 3) are useful for broader regional summaries and performance optimization.
 
 ---
 
