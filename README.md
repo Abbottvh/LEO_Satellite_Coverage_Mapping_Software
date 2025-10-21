@@ -31,17 +31,27 @@ This project visualizes satellite coverage over any region using geospatial hex 
 
 Below are coverage visualizations for four East African countries using mid-inclination satellites (50°–60°). Each map shows hexagonal coverage density and stability over a 24-hour period.
 
-### 🇲🇬 Madagascar
-<img width="460" height="690" alt="Screenshot 2025-10-21 at 2 42 37 PM" src="https://github.com/user-attachments/assets/0fa9943e-7522-453d-9d31-c5f54ed61108" />
+<div style="display: flex; align-items: center; margin-bottom: 20px;">
+  <img src="https://github.com/user-attachments/assets/0fa9943e-7522-453d-9d31-c5f54ed61108" alt="Madagascar Coverage" width="400" style="margin-right: 20px;" />
+  <div><h3 style="margin: 0;">🇲🇬 Madagascar</h3></div>
+</div>
 
-### 🇪🇹 Ethiopia
-<img width="835" height="596" alt="Screenshot 2025-10-21 at 2 51 20 PM" src="https://github.com/user-attachments/assets/721aa561-ba13-4fd5-aeea-f4680fd854d6" />
+<div style="display: flex; align-items: center; margin-bottom: 20px;">
+  <img src="https://github.com/user-attachments/assets/721aa561-ba13-4fd5-aeea-f4680fd854d6" alt="Ethiopia Coverage" width="400" style="margin-right: 20px;" />
+  <div><h3 style="margin: 0;">🇪🇹 Ethiopia</h3></div>
+</div>
 
-### 🇹🇿 Tanzania
-<img width="698" height="557" alt="Screenshot 2025-10-21 at 3 24 48 PM" src="https://github.com/user-attachments/assets/ace17e40-3f2e-4c0f-baac-c7a072e696ff" />
+<div style="display: flex; align-items: center; margin-bottom: 20px;">
+  <img src="https://github.com/user-attachments/assets/ace17e40-3f2e-4c0f-baac-c7a072e696ff" alt="Tanzania Coverage" width="400" style="margin-right: 20px;" />
+  <div><h3 style="margin: 0;">🇹🇿 Tanzania</h3></div>
+</div>
 
-### 🇺🇬 Uganda
-<img width="312" height="307" alt="Screenshot 2025-10-21 at 3 31 24 PM" src="https://github.com/user-attachments/assets/779dbb55-ee19-460d-98b6-143ee6e0f6bc" />
+<div style="display: flex; align-items: center; margin-bottom: 20px;">
+  <img src="https://github.com/user-attachments/assets/779dbb55-ee19-460d-98b6-143ee6e0f6bc" alt="Uganda Coverage" width="400" style="margin-right: 20px;" />
+  <div><h3 style="margin: 0;">🇺🇬 Uganda</h3></div>
+</div>
+
+
 
 ---
 
