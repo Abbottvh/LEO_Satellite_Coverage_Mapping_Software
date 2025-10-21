@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Satellite Coverage Map</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+    #map {
+      height: calc(100vh - 60px);
+    }
+    #controls {
+      height: 60px;
+      padding: 10px;
+      background: #f8f8f8;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+    #timeLabel {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div id="controls">
+    <label for="timeSlider">🕒 Time Offset:</label>
+    <input type="range" id="timeSlider" min="0" max="120" step="10" value="0">
+    <span id="timeLabel">Now</span>
+    <label>
+      <input type="checkbox" id="satelliteToggle">
+      Use limited satellites (200)
+    </label>
+    <button id="exportCoverageBtn">Export Coverage Data</button>
+  </div>
+
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/h3-js"></script>
+  <script src="cities.js"></script>
+  <script src="country-hexmap.js"></script> <!-- ✅ Updated script reference -->
+  <script src="https://unpkg.com/satellite.js/dist/satellite.min.js"></script>
+  <script src="satellite-coverage.js"></script>
+  <script>
+    const map = L.map('map').setView([0, 0], 2);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    let cachedHexagons = [];
+
+    const timeSlider = document.getElementById('timeSlider');
+    const timeLabel = document.getElementById('timeLabel');
+    const satelliteToggle = document.getElementById('satelliteToggle');
+
+    let sliderTimeout;
+
+    // addCityMarkers(map);
+    tileRegion(map, 'uganda.geojson').then(({ hexagons, regionName }) => {
+  cachedHexagons = hexagons;
+  const limitSatellites = satelliteToggle.checked;
+  loadSatellites(hexagons, map, 0, limitSatellites, 50, 60, regionName);
+});
+
+
+    timeSlider.addEventListener('input', () => {
+      const minutes = parseInt(timeSlider.value);
+      timeLabel.textContent = minutes === 0 ? 'Now' : `+${minutes} min`;
+
+      clearTimeout(sliderTimeout);
+      sliderTimeout = setTimeout(() => {
+        if (cachedHexagons.length > 0) {
+          const limitSatellites = satelliteToggle.checked;
+          loadSatellites(cachedHexagons, map, minutes, limitSatellites);
+        }
+      }, 500);
+    });
+
+    satelliteToggle.addEventListener('change', () => {
+      const minutes = parseInt(timeSlider.value);
+      if (cachedHexagons.length > 0) {
+        const limitSatellites = satelliteToggle.checked;
+        loadSatellites(cachedHexagons, map, minutes, limitSatellites);
+      }
+    });
+    // 🌐 Global storage for export
+window.coverageAverages = null;
+window.coverageStability = null;
+
+// 🧪 Hook into export button
+document.getElementById("exportCoverageBtn").addEventListener("click", () => {
+  if (!window.coverageAverages || !window.coverageStability) {
+    console.warn("⚠️ Coverage data not available for export.");
+    return;
+  }
+
+  const exportData = {
+    coverageMap: Object.fromEntries(window.coverageAverages),
+    coverageStability: Object.fromEntries(window.coverageStability)
+  };
+
+  const json = JSON.stringify(exportData, null, 2);
+  const blob = new Blob([json], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "coverage_data.json";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+
+  console.log("📁 coverage_data.json downloaded");
+});
+  </script>
+</body>
+</html>
