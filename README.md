@@ -48,6 +48,28 @@ Higher resolutions (like 5) produce smaller hexagons, allowing for more granular
 
 ---
 
+## 📈 Coverage Analysis Overview
+
+To assess satellite visibility across different regions, this tool performs three key analyses for each hexagonal tile:
+
+### 1. **Average Coverage**
+- Measures how many satellites are visible from a given hexagon over a 24-hour period.
+- Higher values indicate more frequent satellite presence.
+
+### 2. **Stability**
+- Captures how consistent satellite visibility is over time.
+- Lower variance means more predictable coverage.
+
+### 3. **Weighted Stability**
+- Combines both coverage and stability into a single score.
+- Hexes with high satellite presence and low fluctuation receive higher weighted scores.
+
+These metrics are computed for every hexagon in the selected region. The **weighted stability score** is then used to color each hexagon in the map visualizations — darker reds indicate stronger, more stable coverage, while blues indicate minimal or inconsistent visibility.
+
+The tables under each country summarize these metrics across all hexes, showing the range, average, and distribution. This helps compare satellite performance across regions and understand how coverage varies spatially.
+
+---
+
 ## 🌍 East Africa Case Study
 
 Below are coverage visualizations for four East African countries using mid-inclination satellites (50°–60°). Each map shows hexagonal coverage density and stability over a 24-hour period.
