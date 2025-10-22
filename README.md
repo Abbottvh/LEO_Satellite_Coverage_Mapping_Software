@@ -165,7 +165,9 @@ Among the four East African countries analyzed, **Madagascar** emerges as the mo
 </p>
 
 
-When overlaid with Madagascar’s population density and electricy access maps, the satellite coverage distribution aligns closely with electrical urban and coastal population centers. This strong spatial correlation suggests that additional investment or optimization in Madagascar would likely deliver the greatest improvements in service reach and reliability. Among the remaining countries, Tanzania also emerges as a promising secondary candidate. Importatnly, while its overall coverage is somewhat weaker than Madagascar’s, it remains consistently strong in densely populated areas, a key factor for practical deployment. Maps of population density and transportation networks are shown alongside satellite coverage below to highlight the strong correlation between high coverage and easily accessible, densely populated regions in Tanzania.
+When overlaid with Madagascar’s population density and electricy access maps, the satellite coverage distribution aligns closely with electrical urban and coastal population centers. This strong spatial correlation suggests that additional investment or optimization in Madagascar would likely deliver the greatest improvements in service reach and reliability. 
+
+Among the remaining countries, Tanzania also emerges as a promising secondary candidate. Importantly, while its overall coverage is somewhat weaker than Madagascar’s, it remains consistently strong in densely populated areas, a key factor for practical deployment. Maps of population density and transportation networks are shown alongside satellite coverage below to highlight the strong correlation between high coverage and easily accessible, densely populated regions in Tanzania.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/ace17e40-3f2e-4c0f-baac-c7a072e696ff" alt="Tanzania Coverage" width="250" style="margin-right: 20px;" />
