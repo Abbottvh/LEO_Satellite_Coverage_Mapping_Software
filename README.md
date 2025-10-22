@@ -89,9 +89,11 @@ Below are coverage visualizations for four East African countries using mid-incl
 | **Stability**           | 0.0652  | 0.3913| 0.182  | 0.1748 | 0.1715  |
 | **Weighted Stability**  | 0.94    | 4.96  | 2.05   | 2.03   | 2.00   |
 
----
+
 
 Based on these results, Madagascar emerges as a highly promising candidate for expanded Starlink infrastructure. Its mean and median coverage values are nearly double those of the other countries analyzed, and it features concentrated high-coverage zones along the coast, likely corresponding to densely populated areas. The primary concern indicated by the data is the notably low minimum stability value and the generally low stability observed across many regions. Further analysis is required to determine whether these stability issues might offset the advantages of the high-coverage zones. Overall, however, the distribution of the weighted stability scores remains encouraging, making Madagascar a strong candidate for further investigation.
+
+---
 
 ### 🇪🇹 Ethiopia
 
@@ -105,9 +107,10 @@ Based on these results, Madagascar emerges as a highly promising candidate for e
 | **Stability**           | 0.1767  | 0.7067| 0.3284 | 0.3165 | 0.3335  |
 | **Weighted Stability**  | 1.20    | 5.27  | 2.24   | 2.13   | 2.07    |
 
----
 
 Ethiopia demonstrates a particularly high concentration of coverage in its eastern region, exhibiting a level of consistency unmatched by any other country analyzed. In addition, its mean and median stability values, along with average coverage metrics, remain relatively strong, indicating promising technical viability. However, the primary limitation for Ethiopia is not the data itself but rather the geographic context: the regions with the highest compatibility are largely uninhabited desert areas. As a result, these zones offer limited potential for meaningful market expansion or infrastructure development within the Starlink network.
+
+---
 
 ### 🇹🇿 Tanzania
 
@@ -121,9 +124,10 @@ Ethiopia demonstrates a particularly high concentration of coverage in its easte
 | **Stability**           | 0.0911  | 0.6025| 0.3227 | 0.3186 | 0.3255     |
 | **Weighted Stability**  | 1.02    | 3.27  | 1.91   | 1.88   | 2.06   |
 
----
 
 Tanzania stands out as a strong candidate primarily due to a well-defined corridor of consistently stable coverage running directly through the country. While it may lack the numerous high-coverage zones seen in other nations analyzed, its overall uniformity and reliability are notable strengths. In terms of metrics, Tanzania closely mirrors Ethiopia, exhibiting strong stability values and average coverage scores. However, unlike Ethiopia, Tanzania benefits from a significant overlap between regions of high population density and areas of strong coverage. This alignment enhances its strategic potential, positioning Tanzania as a strong runner-up to Madagascar among the top candidates for further study.
+
+---
 
 ### 🇺🇬 Uganda
 
