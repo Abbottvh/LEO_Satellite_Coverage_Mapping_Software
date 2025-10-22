@@ -5,7 +5,7 @@ This project provides an intuitive way to visualize low Earth orbit (LEO) satell
 ---
 
 
-## 🧱 Hexagon Tiling with H3
+## Hexagon Tiling with H3
 
 This project uses [H3 hexagonal indexing](https://h3geo.org/) to tile geographic regions into uniform cells. Hex tiling enables consistent spatial analysis across varying terrain, making it ideal for satellite coverage modeling.
 
@@ -25,7 +25,7 @@ Higher resolutions (like 5) produce smaller hexagons, allowing for more granular
 
 ---
 
-## 📈 Coverage Analysis Overview
+## Coverage Analysis Overview
 
 To assess satellite visibility across different regions, this tool performs three key analyses for each hexagonal tile:
 
@@ -47,7 +47,7 @@ The tables under each country summarize these metrics across all hexes, showing 
 
 ---
 
-## 🌍 East Africa Case Study
+## East Africa Case Study
 
 Below are coverage visualizations for four East African countries using mid-inclination Starlink satellites (50°–60°). Each map shows hexagonal coverage density and stability over a 24-hour period. A legend for the coloring scheme of the heatmaps has been provided below:
 
@@ -55,7 +55,7 @@ Below are coverage visualizations for four East African countries using mid-incl
 
 ---
 
-### 🇲🇬 Madagascar
+### Madagascar
 
 <div style="display: flex; align-items: center; margin-bottom: 10px;">
   <img src="https://github.com/user-attachments/assets/0fa9943e-7522-453d-9d31-c5f54ed61108" alt="Madagascar Coverage" width="400" style="margin-right: 20px;" />
@@ -123,7 +123,7 @@ Unfortunately, initial modeling indicates limited potential for Starlink infrast
 
 ---
 
-## 📦 Export & Analysis
+## Export & Analysis
 
 Coverage data is exported as JSON files containing:
 - `coverageMap`: average satellite visibility per hex
@@ -132,7 +132,7 @@ Coverage data is exported as JSON files containing:
 These files can then utilize python libraries such as numpy, pandas, and plotly to perform further analysis and visualiztion. 
 
 
-## 📍 Conclusion
+## Conclusion
 
 Among the four East African countries analyzed, **Madagascar** emerges as the most promising candidate for Starlink infrastructure development. Its coverage map shows consistently high weighted stability scores across densely populated regions, suggesting strong and reliable visibility where it matters most. Although Ethiopia shows promise for areas of strong and consistent coverage, it mainly covers regions of the nation with low population densities. 
 
