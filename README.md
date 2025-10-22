@@ -71,7 +71,9 @@ The tables under each country summarize these metrics across all hexes, showing 
 
 ## 🌍 East Africa Case Study
 
-Below are coverage visualizations for four East African countries using mid-inclination Starlink satellites (50°–60°). Each map shows hexagonal coverage density and stability over a 24-hour period.
+Below are coverage visualizations for four East African countries using mid-inclination Starlink satellites (50°–60°). Each map shows hexagonal coverage density and stability over a 24-hour period. A legened for coloring scheme of the heatmaps has been provided below:
+
+<img width="180" alt="Weighted Stability Score Legend" src="https://github.com/user-attachments/assets/47fbcf24-e528-4939-a50c-06d7239f83ae" />
 
 ---
 
