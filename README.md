@@ -159,11 +159,19 @@ These files can then utilize python libraries such as numpy, pandas, and plotly 
 Among the four East African countries analyzed, **Madagascar** emerges as the most promising candidate for Starlink infrastructure development. Its coverage map shows consistently high weighted stability scores across densely populated regions, suggesting strong and reliable visibility where it matters most. Although Ethiopia shows promise for areas of strong and consistent coverage, it mainly covers regions of the nation with low population densities. 
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/0fa9943e-7522-453d-9d31-c5f54ed61108" alt="Madagascar Coverage" width="400" style="margin-right: 20px;" />
-  <img src="https://github.com/user-attachments/assets/ba2556fb-6608-4428-98bc-d5f5d644dc36" alt="Madagascar Population Distribution Map" width="400" />
+  <img src="https://github.com/user-attachments/assets/0fa9943e-7522-453d-9d31-c5f54ed61108" alt="Madagascar Coverage" width="200" style="margin-right: 20px;" />
+  <img src="https://github.com/user-attachments/assets/ba2556fb-6608-4428-98bc-d5f5d644dc36" alt="Madagascar Population Distribution Map" width="225" />
+  <img width="300" alt="Screenshot 2025-10-22 at 12 28 38 AM" src="https://github.com/user-attachments/assets/b89b393d-5ba0-4554-a691-14504b622991" />
 </p>
 
-When overlaid with Madagascar’s population density map, the satellite coverage distribution aligns closely with urban and coastal population centers. This strong spatial correlation suggests that additional investment or optimization in Madagascar would likely deliver the greatest improvements in service reach and reliability. Among the remaining countries, Tanzania also emerges as a promising secondary candidate. Importatnly, while its overall coverage is somewhat weaker than Madagascar’s, it remains consistently strong in densely populated areas, a key factor for practical deployment.
+
+When overlaid with Madagascar’s population density and electricy access maps, the satellite coverage distribution aligns closely with electrical urban and coastal population centers. This strong spatial correlation suggests that additional investment or optimization in Madagascar would likely deliver the greatest improvements in service reach and reliability. Among the remaining countries, Tanzania also emerges as a promising secondary candidate. Importatnly, while its overall coverage is somewhat weaker than Madagascar’s, it remains consistently strong in densely populated areas, a key factor for practical deployment. Maps of population density and transportation networks are shown alongside satellite coverage below to highlight the strong correlation between high coverage and easily accessible, densely populated regions in Tanzania.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/ace17e40-3f2e-4c0f-baac-c7a072e696ff" alt="Tanzania Coverage" width="250" style="margin-right: 20px;" />
+  <img width="250" alt="image" src="https://github.com/user-attachments/assets/a4481733-7ff6-44ee-82a1-61a935970792" />
+  <img width="350" alt="image" src="https://github.com/user-attachments/assets/3515ac3e-d491-476f-9dde-0862e562fa9d" />
+</p>
 
 Future iterations of this analysis could incorporate real-time demand modeling, infrastructure overlays, or socioeconomic data to refine deployment strategies even further.
 
