@@ -4,15 +4,6 @@ This project provides an intuitive way to visualize low Earth orbit (LEO) satell
 
 ---
 
-## 🚀 Features
-
-- **Dynamic GeoJSON Tiling**: Converts any country or region into H3 hexagons for spatial analysis.
-- **Satellite Propagation**: Uses TLE data and orbital mechanics to simulate satellite positions over time.
-- **Coverage Analysis**: Computes average visibility and stability scores for each hexagon.
-- **Interactive UI**: Toggle satellite filters, switch regions, and export coverage data.
-- **Python Analytics**: Analyze exported JSON files using Pandas and Plotly for deeper insights.
-
----
 
 ## 🧱 Hexagon Tiling with H3
 
