@@ -1,6 +1,6 @@
 # LEO Satellite Coverage Mapping Software
 
-This project provides an intuitive way to visualize low Earth orbit (LEO) satellite coverage for any location on Earth, modeled after a potential Starlink coverage prediction tool. By combining Uber’s open-source H3 geospatial indexing system for hexagonal tiling with real-time orbital propagation data from Celestrak for 8,046 Starlink satellites, the program can analyze a region’s average coverage and stability within seconds. This implementation serves as a proof of concept for a more advanced Starlink coverage modeling platform.
+This project provides an intuitive way to visualize low Earth orbit (LEO) satellite coverage for any location on Earth, modeled after a potential Starlink coverage prediction tool. By combining Uber’s open-source H3 geospatial indexing system for hexagonal tiling with real-time orbital propagation data from Celestrak for 8,046 Starlink satellites, the program can analyze a region’s average coverage and stability within seconds. This implementation serves as a proof of concept for a more advanced Starlink coverage modeling platform. Specifically, one that could ultimately serve as an internal tool to help identify and prioritize developing markets where expanded connectivity would have the greatest impact.
 
 ---
 
