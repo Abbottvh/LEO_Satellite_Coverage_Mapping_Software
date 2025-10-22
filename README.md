@@ -86,10 +86,12 @@ Below are coverage visualizations for four East African countries using mid-incl
 |                   | Min     | Max   | Mean   | Median | Mode   |
 |-------------------------|---------|-------|--------|--------|--------|
 | **Coverage**            | 8.21    | 20.00 | 11.63  | 10.96  | 8.71   |
-| **Stability**           | 0.0652  | 0.3913| 0.182  | 0.1748 | 1.715  |
+| **Stability**           | 0.0652  | 0.3913| 0.182  | 0.1748 | 0.1715  |
 | **Weighted Stability**  | 0.94    | 4.96  | 2.05   | 2.03   | 2.00   |
 
 ---
+
+Based on these results, Madagascar emerges as a highly promising candidate for expanded Starlink infrastructure. Its mean and median coverage values are nearly double those of the other countries analyzed, and it features concentrated high-coverage zones along the coast, likely corresponding to densely populated areas. The primary concern indicated by the data is the notably low minimum stability value and the generally low stability observed across many regions. Further analysis is required to determine whether these stability issues might offset the advantages of the high-coverage zones. Overall, however, the distribution of the weighted stability scores remains encouraging, making Madagascar a strong candidate for further investigation.
 
 ### 🇪🇹 Ethiopia
 
@@ -105,6 +107,8 @@ Below are coverage visualizations for four East African countries using mid-incl
 
 ---
 
+Ethiopia demonstrates a particularly high concentration of coverage in its eastern region, exhibiting a level of consistency unmatched by any other country analyzed. In addition, its mean and median stability values, along with average coverage metrics, remain relatively strong, indicating promising technical viability. However, the primary limitation for Ethiopia is not the data itself but rather the geographic context: the regions with the highest compatibility are largely uninhabited desert areas. As a result, these zones offer limited potential for meaningful market expansion or infrastructure development within the Starlink network.
+
 ### 🇹🇿 Tanzania
 
 <div style="display: flex; align-items: center; margin-bottom: 10px;">
@@ -119,6 +123,8 @@ Below are coverage visualizations for four East African countries using mid-incl
 
 ---
 
+Tanzania stands out as a strong candidate primarily due to a well-defined corridor of consistently stable coverage running directly through the country. While it may lack the numerous high-coverage zones seen in other nations analyzed, its overall uniformity and reliability are notable strengths. In terms of metrics, Tanzania closely mirrors Ethiopia, exhibiting strong stability values and average coverage scores. However, unlike Ethiopia, Tanzania benefits from a significant overlap between regions of high population density and areas of strong coverage. This alignment enhances its strategic potential, positioning Tanzania as a strong runner-up to Madagascar among the top candidates for further study.
+
 ### 🇺🇬 Uganda
 
 <div style="display: flex; align-items: center; margin-bottom: 10px;">
@@ -131,6 +137,7 @@ Below are coverage visualizations for four East African countries using mid-incl
 | **Stability**           | 0.0594  | 0.5294| 0.2888 | 0.2698 | 0.2354 |
 | **Weighted Stability**  | 0.72    | 3.09  | 1.68   | 1.57   | 1.92   |
 
+Unfortunately, initial modeling indicates limited potential for Starlink infrastructure development in Uganda. Nearly half of the country (most notably its most densely populated regions) exhibits low or inconsistent coverage. Even in areas that are reached, signal strength remains modest. Across all key metrics, Uganda underperforms relative to Ethiopia and Tanzania, further reducing its viability as a near-term candidate. Overall, the data suggest that Uganda is not a promising option at this stage, and analytical focus would be better directed toward more favorable regions.
 
 ---
 
