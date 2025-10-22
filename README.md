@@ -155,7 +155,7 @@ When overlaid with Madagascar’s population density map, the satellite coverage
 Future iterations of this analysis could incorporate real-time demand modeling, infrastructure overlays, or socioeconomic data to refine deployment strategies even further.
 
 ---
-## 🔮 Next Steps for Enhanced Modeling
+## Next Steps for Enhanced Modeling
 
 To improve the accuracy and predictive power of this satellite coverage analysis, future development could focus on:
 
@@ -169,4 +169,5 @@ To improve the accuracy and predictive power of this satellite coverage analysis
 - **Predictive Scenarios:** Modeling future satellite deployments or constellation adjustments to forecast coverage evolution.  
 
 These enhancements would enable more strategic planning, better resource allocation, and deeper insight into where Starlink can deliver the greatest value.
+
 --
