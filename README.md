@@ -143,7 +143,7 @@ These files can then utilize python libraries such as numpy, pandas, and plotly 
 
 ## 📍 Conclusion
 
-Among the four East African countries analyzed, **Madagascar** emerges as the most promising candidate for satellite deployment. Its coverage map shows consistently high weighted stability scores across densely populated regions, suggesting strong and reliable visibility where it matters most. Although Ethiopia shows promise for areas of strong and consistent coverage, it mainly covers regions of the nation with low population densities. 
+Among the four East African countries analyzed, **Madagascar** emerges as the most promising candidate for Starlink infrastructure development. Its coverage map shows consistently high weighted stability scores across densely populated regions, suggesting strong and reliable visibility where it matters most. Although Ethiopia shows promise for areas of strong and consistent coverage, it mainly covers regions of the nation with low population densities. 
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/0fa9943e-7522-453d-9d31-c5f54ed61108" alt="Madagascar Coverage" width="400" style="margin-right: 20px;" />
