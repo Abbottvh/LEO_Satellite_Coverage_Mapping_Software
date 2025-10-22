@@ -1,42 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Satellite Coverage Map</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <style>
     body {
       margin: 0;
-      font-family: sans-serif;
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background-color: #f0f2f5;
     }
-    #map {
-      height: calc(100vh - 60px);
-    }
+
     #controls {
-      height: 60px;
-      padding: 10px;
-      background: #f8f8f8;
       display: flex;
+      justify-content: center;
       align-items: center;
-      gap: 10px;
-      border-bottom: 1px solid #ccc;
+      padding: 12px 20px;
+      background-color: #ffffff;
+      border-bottom: 1px solid #ddd;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
-    #timeLabel {
-      font-weight: bold;
+
+    #controls button {
+      background-color: #0078d4;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.2s ease;
+    }
+
+    #controls button:hover {
+      background-color: #005fa3;
+    }
+
+    #map {
+      height: calc(100vh - 70px);
+      width: 100%;
     }
   </style>
 </head>
 <body>
   <div id="controls">
-    <label for="timeSlider">🕒 Time Offset:</label>
-    <input type="range" id="timeSlider" min="0" max="120" step="10" value="0">
-    <span id="timeLabel">Now</span>
-    <label>
-      <input type="checkbox" id="satelliteToggle">
-      Use limited satellites (200)
-    </label>
-    <button id="exportCoverageBtn">Export Coverage Data</button>
+    <button id="exportCoverageBtn">📤 Export Coverage Data</button>
   </div>
 
   <div id="map"></div>
@@ -44,7 +53,7 @@
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="https://unpkg.com/h3-js"></script>
   <script src="cities.js"></script>
-  <script src="country-hexmap.js"></script> <!-- ✅ Updated script reference -->
+  <script src="country-hexmap.js"></script>
   <script src="https://unpkg.com/satellite.js/dist/satellite.min.js"></script>
   <script src="satellite-coverage.js"></script>
   <script>
@@ -56,70 +65,39 @@
 
     let cachedHexagons = [];
 
-    const timeSlider = document.getElementById('timeSlider');
-    const timeLabel = document.getElementById('timeLabel');
-    const satelliteToggle = document.getElementById('satelliteToggle');
-
-    let sliderTimeout;
-
-    // addCityMarkers(map);
-    tileRegion(map, 'uganda.geojson').then(({ hexagons, regionName }) => {
-  cachedHexagons = hexagons;
-  const limitSatellites = satelliteToggle.checked;
-  loadSatellites(hexagons, map, 0, limitSatellites, 50, 60, regionName);
-});
-
-
-    timeSlider.addEventListener('input', () => {
-      const minutes = parseInt(timeSlider.value);
-      timeLabel.textContent = minutes === 0 ? 'Now' : `+${minutes} min`;
-
-      clearTimeout(sliderTimeout);
-      sliderTimeout = setTimeout(() => {
-        if (cachedHexagons.length > 0) {
-          const limitSatellites = satelliteToggle.checked;
-          loadSatellites(cachedHexagons, map, minutes, limitSatellites);
-        }
-      }, 500);
+    tileRegion(map, 'country_data/ethiopia.geojson').then(({ hexagons, regionName }) => {
+      cachedHexagons = hexagons;
+      loadSatellites(hexagons, map, 0, false, 50, 60, regionName);
     });
 
-    satelliteToggle.addEventListener('change', () => {
-      const minutes = parseInt(timeSlider.value);
-      if (cachedHexagons.length > 0) {
-        const limitSatellites = satelliteToggle.checked;
-        loadSatellites(cachedHexagons, map, minutes, limitSatellites);
+    window.coverageAverages = null;
+    window.coverageStability = null;
+
+    document.getElementById("exportCoverageBtn").addEventListener("click", () => {
+      if (!window.coverageAverages || !window.coverageStability) {
+        console.warn("⚠️ Coverage data not available for export.");
+        return;
       }
+
+      const exportData = {
+        coverageMap: Object.fromEntries(window.coverageAverages),
+        coverageStability: Object.fromEntries(window.coverageStability)
+      };
+
+      const json = JSON.stringify(exportData, null, 2);
+      const blob = new Blob([json], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "coverage_data.json";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+
+      console.log("📁 coverage_data.json downloaded");
     });
-    // 🌐 Global storage for export
-window.coverageAverages = null;
-window.coverageStability = null;
-
-// 🧪 Hook into export button
-document.getElementById("exportCoverageBtn").addEventListener("click", () => {
-  if (!window.coverageAverages || !window.coverageStability) {
-    console.warn("⚠️ Coverage data not available for export.");
-    return;
-  }
-
-  const exportData = {
-    coverageMap: Object.fromEntries(window.coverageAverages),
-    coverageStability: Object.fromEntries(window.coverageStability)
-  };
-
-  const json = JSON.stringify(exportData, null, 2);
-  const blob = new Blob([json], { type: "application/json" });
-  const url = URL.createObjectURL(blob);
-
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = "coverage_data.json";
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-  URL.revokeObjectURL(url);
-
-  console.log("📁 coverage_data.json downloaded");
-});
   </script>
 </body>
 </html>
