@@ -182,7 +182,7 @@ Future iterations of this analysis could incorporate real-time demand modeling, 
 
 To improve the accuracy and predictive power of this satellite coverage analysis, future development could focus on:
 
-- **Temporal Resolution:** Incorporating finer time slices (e.g., hourly or seasonal) to capture dynamic coverage patterns and diurnal variations.  
+- **Temporal Resolution:** Incorporating finer time slices (e.g., hourly or seasonal) to capture dynamic coverage patterns and daytime variations.  
 - **Orbital Diversity:** Expanding beyond mid-inclination satellites to include polar, equatorial, and sun-synchronous orbits for global completeness.  
 - **Population & Demand Overlays:** Integrating real-time population density, infrastructure, and usage demand data to prioritize high-impact regions.  
 - **Signal Quality Modeling:** Simulating link budgets, elevation angles, and atmospheric effects to evaluate actual service viability.  
