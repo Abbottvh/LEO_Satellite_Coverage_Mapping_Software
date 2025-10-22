@@ -14,19 +14,6 @@ This project provides an intuitive way to visualize low Earth orbit (LEO) satell
 
 ---
 
-
-## 🧰 Technologies Used
-
-| Component                  | Description                                                                 |
-|----------------------------|-----------------------------------------------------------------------------|
-| **JavaScript + Leaflet**   | Frontend map rendering and UI controls                                     |
-| **H3 Library**             | Hexagonal spatial indexing for tiling and coverage mapping                  |
-| **Satellite.js**           | Orbital propagation and satellite position calculations                     |
-| **GeoJSON**                | Region boundary input for tiling                                            |
-| **LocalStorage**           | Caching coverage maps for performance                                       |
-
----
-
 ## 🧱 Hexagon Tiling with H3
 
 This project uses [H3 hexagonal indexing](https://h3geo.org/) to tile geographic regions into uniform cells. Hex tiling enables consistent spatial analysis across varying terrain, making it ideal for satellite coverage modeling.
